@@ -38,8 +38,7 @@
       <td>@migrante.ciudad</td>
       <td>@migrante.situacion_laboral</td>
       <td>
-        <a class="btn btn-info" asp-page="./Details" asp-route-migranteId="@migrante.id"><i
-          class="fas fa-adjust"></i>Ver Mis Datos</a>
+        <a class="btn btn-info" asp-page="./Details" asp-route-migranteId="@migrante.id"><i class="fas fa-adjust"></i>Ver Mis Datos</a>
         <a class="btn btn-info" asp-page="./Edit" asp-route-migranteId="@migrante.id">Actualizar mis Datos</a>
         <form method="POST">
           <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@migrante.id">

@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Hackaton.App.Persistencia.AppRepositorios;
 using Hackaton.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
  
 namespace Hackaton.App.Frontend.Pages
 {
+    [Authorize]
     public class ListMigranteModel : PageModel
     {
        
@@ -35,9 +37,5 @@ namespace Hackaton.App.Frontend.Pages
         }
         return RedirectToPage("./List");
     }
-
-
-
-
     }
 }
