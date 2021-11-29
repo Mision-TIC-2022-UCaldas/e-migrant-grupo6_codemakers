@@ -1,0 +1,18 @@
+@page
+@model Hackaton.App.Frontend.Pages.DetailsEntidadModel
+@{
+    var entidad = Model.Entidad;
+}
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"> <b>id: </b> @entidad.id</li>
+  <li class="list-group-item"> <b>razon_social: </b> @entidad.razon_social</li>
+  <li class="list-group-item"> <b>nit: </b> @entidad.nit</li>
+  <li class="list-group-item"><b>direccion: </b> @entidad.direccion</li>
+  <li class="list-group-item"><b>Ciudad: </b> @entidad.ciudad</li>
+  <li class="list-group-item"><b>telefono: </b> @entidad.telefono</li>
+  <li class="list-group-item"><b>email: </b> @entidad.email</li>
+  <li class="list-group-item"><b>webpage: </b> @entidad.webpage</li>
+  <li class="list-group-item"><b>sector: </b> @entidad.sector</li>
+  <li class="list-group-item"><b>Tipo de servicio: </b> @entidad.servicio/li>
+</ul>	

@@ -1,0 +1,40 @@
+@page
+@model Hackaton.App.Frontend.Pages.ListEntidadModel
+@{
+}
+ 
+<h1>Listado Entidades Colaborativas</h1>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Razon social</th>
+        <th>Nit</th>
+        <th>Direccion</th>
+        <th>Ciudad</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Pagina Web</th>
+        <th>sector</th>
+        <th>Tipo de servicio</th>
+    </thead>
+    @foreach (var entidad in Model.Entidades)
+    {
+        <tr>
+            <td>@entidad.id</td>
+            <td>@entidad.razon_social</td>
+            <td>@entidad.nit</td>
+            <td>@entidad.direccion</td>
+            <td>@entidad.ciudad</td>
+            <td>@entidad.telefono</td>
+            <td>@entidad.email</td>
+            <td>@entidad.webpage</td>
+            <td>@entidad.sector</td>
+            <td>@entidad.servicio</td>          
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-entidadId="@entidad.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" asp-page="./Edit" asp-route-entidadId="@entidad.id">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
+</table>

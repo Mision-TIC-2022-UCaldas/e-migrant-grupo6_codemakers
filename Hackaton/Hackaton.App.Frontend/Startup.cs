@@ -30,6 +30,7 @@ namespace Hackaton.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<RepositorioMigrantes, RepositorioMigrantes>();
+            services.AddSingleton<RepositorioEntidades, RepositorioEntidades>();
             services.AddControllersWithViews();
         }
 

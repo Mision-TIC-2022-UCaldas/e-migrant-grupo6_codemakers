@@ -1,0 +1,40 @@
+@page
+@model Hackaton.App.Frontend.Pages.EditEntidadModel
+@{
+    var entidad = Model.Entidad;
+}
+<div class="text-center">
+    <form method="post">
+        <label for="id" class="form-label">Id:</label>
+        <input type="number" class="form-control" id="id" name="id" placeholder="Id" asp-for="@entidad.id">
+
+        <label for="razon_social" class="form-label">razon_social:</label>
+        <input type="text" class="form-control" id="razon_social" name="razon_social" placeholder="razon_social" asp-for="@entidad.razon_social">
+        
+        <label for="nit" class="form-label">nit:</label>
+        <input type="number" class="form-control" id="nit" name="nit" placeholder="nit" asp-for="@entidad.nit">
+        
+        <label for="direccion" class="form-label">Direccion: </label>
+        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" asp-for="@entidad.direccion">
+        
+        <label for="ciudad" class="form-label">ciudad:</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="ciudad" asp-for="@entidad.ciudad">
+        
+        <label for="telefono" class="form-label">telefono:</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono" asp-for="@entidad.telefono">
+        
+        <label for="email" class="form-label">email:</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="email" asp-for="@entidad.email">
+
+        <label for="webpage" class="form-label">webpage:</label>
+        <input type="text" class="form-control" id="webpage" name="webpage" placeholder="webpage" asp-for="@entidad.webpage">
+        
+        <label for="sector" class="form-label">sector:</label>
+        <input type="text" class="form-control" id="sector" name="sector" placeholder="Digita una opcion: Publico, Privado, Sin animo de lucro, No gubernamental, Otro" asp-for="@entidad.sector">
+        
+        <label for="servicio" class="form-label">servicio:</label>
+        <input type="text" class="form-control" id="capacidad_maxima" name="servicio" placeholder="Digita una opcion: Salud, Juridicos, Viveres, Comida preparada, Empleo, Alojamiento temporal, Alojamiento permanente, Educacion, Otros" asp-for="@entidad.servicio">
+        <hr>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</div>

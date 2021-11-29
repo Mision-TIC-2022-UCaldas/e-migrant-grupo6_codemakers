@@ -1,0 +1,42 @@
+@page
+@model Hackaton.App.Frontend.Pages.FormEntidadModel
+@{
+  var entidad = Model.Entidad;
+}
+
+<h1>Registro Entidades Colaboradoras</h1>
+
+<div class="text-center">
+  <form method="POST">
+    <label for="razon_social" class="form-label">Razon Social:</label>
+    <input type="text" class="form-control" id="razon_social" placeholder="Razon Social" asp-for="@entidad.razon_social"
+      Required>
+
+    <label for="nit" class="form-label">Numero Identificacion Tributario:</label>
+    <input type="number" class="form-control" id="nit" placeholder="Numero Identificacion Tributaria" asp-for="@entidad.nit" Required>
+    
+    <label for="direccion" class="form-label">Direccion de la Empresa: </label>
+    <input type="text" class="form-control" id="direccion" placeholder="Diraccion de la Empresa" asp-for="@entidad.direccion" Required>
+    
+    <label for="ciudad" class="form-label">Ciudad:</label>
+    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" asp-for="@entidad.ciudad" Required>
+    
+    <label for="telefono" class="form-label">Telefono:</label>
+    <input type="text" class="form-control" id="telefono" placeholder="Numero Telefono" asp-for="@entidad.telefono" Required>
+
+    <label for="email" class="form-label">Email:</label>
+    <input type="text" class="form-control" id="email" placeholder="Email" asp-for="@entidad.email">
+   
+    <label for="webpage" class="form-label">Pagina Web:</label>
+    <input type="text" class="form-control" id="webpage" placeholder="Pagina Web" asp-for="@entidad.webpage">  
+  
+    <label for="servicio" class="form-label">Servicios Ofrecidos:</label>
+    <input type="text" class="form-control" id="servicio" placeholder="Digita una opcion: Salud, Juridicos, Viveres, Comida preparada, Empleo, Alojamiento temporal, Alojamiento permanente, Educacion, Otros" asp-for="@entidad.servicio" Required>
+
+    <label for="sector" class="form-label">Sector Economico:</label>
+    <input type="text" class="form-control" id="sector" placeholder="Digita una opcion: Publico, Privado, Sin animo de lucro, No gubernamental, Otro" asp-for="@entidad.sector" Required>   
+    <hr>      
+    <br>   
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
